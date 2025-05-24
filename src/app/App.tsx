@@ -10,6 +10,7 @@ import Image from "next/image";
 import Transcript from "./components/Transcript";
 import Events from "./components/Events";
 import BottomToolbar from "./components/BottomToolbar";
+import Bottom from "./components/Bottom";
 
 // Types
 import { AgentConfig, SessionStatus } from "@/app/types";
@@ -408,17 +409,9 @@ function App() {
       <div className="p-5 text-lg font-semibold flex justify-between items-center">
         <div className="flex items-center">
           <div onClick={() => window.location.reload()} style={{ cursor: 'pointer' }}>
-            <Image
-              src="/openai-logomark.svg"
-              alt="OpenAI Logo"
-              width={20}
-              height={20}
-              className="mr-2"
-            />
+  
           </div>
-          <div>
-            Realtime API <span className="text-gray-500">Agents</span>
-          </div>
+  
         </div>
         <div className="flex items-center">
           <label className="flex items-center text-base gap-1 mr-2 font-medium">
@@ -497,7 +490,7 @@ function App() {
         <Events isExpanded={isEventsPaneExpanded} />
       </div>
 
-      <BottomToolbar
+           <Bottom
         sessionStatus={sessionStatus}
         onToggleConnection={onToggleConnection}
         isPTTActive={isPTTActive}
