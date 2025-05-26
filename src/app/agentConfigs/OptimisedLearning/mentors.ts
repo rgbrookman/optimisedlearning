@@ -48,19 +48,6 @@ Friendly and fast pace.
   tools: [],
 };
 
-const TeacherTool: Tool = {
-  type: "file_search", 
-  name: "teacher tool",
-  description: "music theory knowledge",
-  parameters: {
-    type: "string", 
-    properties: {
-      
-    }, 
-    required: [], 
-    additionalProperties: false,
-  },
-}
 
 const PianoTeacher: AgentConfig = {
   name: "piano",
