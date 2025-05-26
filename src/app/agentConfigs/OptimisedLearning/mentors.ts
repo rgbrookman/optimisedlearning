@@ -1,4 +1,4 @@
-import { AgentConfig } from "@/app/types";
+import { AgentConfig, Tool } from "@/app/types";
 
 // Define agents
 
@@ -47,6 +47,20 @@ Friendly and fast pace.
 `,
   tools: [],
 };
+
+const TeacherTool: Tool = {
+  type: "file_search", 
+  name: "teacher tool",
+  description: "music theory knowledge",
+  parameters: {
+    type: "string", 
+    properties: {
+      
+    }, 
+    required: [], 
+    additionalProperties: false,
+  },
+}
 
 const PianoTeacher: AgentConfig = {
   name: "piano",
@@ -140,5 +154,6 @@ Fast-paced but clear. You adjust your pacing based on the learner’s needs and 
 `,
   tools: [],
 };
+
 
 export { PianoTeacher, philosopher, ReactTeacher};

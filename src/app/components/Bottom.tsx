@@ -52,18 +52,7 @@ function Bottom({
   }
 
   return (
-    // Main toolbar container:
-    // - p-4: Padding around the toolbar
-    // - flex: Enables flexbox layout
-    // - flex-wrap: Allows items to wrap to the next line on smaller screens
-    // - items-center: Aligns items vertically to the center
-    // - justify-center: Centers items horizontally
-    // - gap-x-6: Horizontal gap between items
-    // - gap-y-4: Vertical gap between items when they wrap
-    // - bg-white dark:bg-gray-900: Background color with dark mode support
-    // - shadow-lg: Adds a larger shadow for better depth
-    // - rounded-lg: Applies rounded corners to the toolbar itself
-    <div className="p-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-4 bg-white dark:bg-gray-900 shadow-lg rounded-lg">
+    <div className="p-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-4 bg-white dark:bg-gray-900 shadow-lg">
       <button
         onClick={onToggleConnection}
         className={getConnectionButtonClasses()}
@@ -104,10 +93,11 @@ function Bottom({
           Push to talk
         </label>
         <button
-          onMouseDown={handleTalkButtonDown}
-          onMouseUp={handleTalkButtonUp}
-          onTouchStart={handleTalkButtonDown} // Ensure touch events are handled
-          onTouchEnd={handleTalkButtonUp}     // Ensure touch events are handled
+          // onMouseDown={handleTalkButtonDown}
+          // onMouseUp={handleTalkButtonUp}
+          // onTouchStart={handleTalkButtonDown} // Ensure touch events are handled
+          // onTouchEnd={handleTalkButtonUp}     // Ensure touch events are handled
+          onClick={isPTTUserSpeaking ? handleTalkButtonUp : handleTalkButtonDown}
           disabled={!isPTTActive}
           // Talk button styling:
           // - Base styles: padding, text size, font weight, rounded corners, shadow, transitions

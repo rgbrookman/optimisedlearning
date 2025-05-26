@@ -12,7 +12,7 @@ export async function GET() {
         },
         body: JSON.stringify({
           model: "gpt-4o-realtime-preview",
-          voice: "sage",
+          voice: "alloy",
         }),
       }
     );

@@ -19,7 +19,7 @@ export interface ToolParameters {
 }
 
 export interface Tool {
-  type: "function";
+  type: string;
   name: string;
   description: string;
   parameters: ToolParameters;
