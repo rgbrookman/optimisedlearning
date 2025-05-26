@@ -1,4 +1,4 @@
-import { AgentConfig, Tool } from "@/app/types";
+import { AgentConfig } from "@/app/types";
 
 // Define agents
 
