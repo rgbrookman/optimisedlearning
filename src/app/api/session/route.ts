@@ -12,7 +12,8 @@ export async function GET() {
         },
         body: JSON.stringify({
           model: "gpt-4o-realtime-preview",
-          voice: "alloy",
+         voice: "alloy",
+         speed: 1.5,
         }),
       }
     );
