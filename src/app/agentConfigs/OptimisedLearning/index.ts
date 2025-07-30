@@ -10,7 +10,7 @@ ScorecardExpert.downstreamAgents = [quizzer];
 
 
 const agents = injectTransferTools([
-ReactTeacher, philosopher, PianoTeacher, quizzer
+ReactTeacher, philosopher, PianoTeacher, quizzer, ScorecardExpert
 ]);
 
 export default agents;
